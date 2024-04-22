@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    --graphic: #755cde;
+    --ui: #f6a560;
+    --apps: #f39e9e;
+    --photo: #61c4b7;
+    --illustrations: #eb7565;
+    --motion: #552049;
+    --btn: #030303;
+    --font: #7a746e;
+    --white: #fff7f0;
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--white);
+    
+}
+
+
+/* Typography, Universal */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    color: var(--font);
+    line-height: 1.5em;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+    padding: 1em 2em;
+    border-radius: 30px;
+    font-size: .8em;
+}
+
+/* Layout */
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 3rem;
+}
+
+.logo {
+    height: 45px;
+}
+nav {
+    margin-top: 1rem;
+    display: flex;
+    padding-inline: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: .5em;
+}
+
+h3 {
+    font-size: 1.7rem;
+    margin: 1em;
+    color: var(--white);
+}
+
+.main-header p {
+    max-width: 90%;
+    margin: 0 auto 2em;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 350px, repeat(4, 175px);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    grid-template-areas: 
+        'graphic graphic'
+        'ui apps'
+        'illustrations illustrations' 
+        'photo photo'
+        'motion motion';
+    margin-bottom: 6rem;
+    
+}
+.skills > div {
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 30px);
+    background-position-y: 30px;
+    height: 175px;
+    border-radius: 15px;
+}
+
+
+
+
+.design.design {
+    grid-area: graphic;
+    background-color: var(--graphic);
+    height: 350px;
+
+    background-image: url(img/pattern-graphic-design.svg);
+    
+    
+}
+
+.ui.ui {
+    grid-area: ui;
+    background-color: var(--ui);
+    background-image: url(img/pattern-ui-ux.svg);
+    
+}
+
+.apps.apps {
+    grid-area: apps;
+    background-color: var(--apps);
+    background-image: url(img/pattern-apps.svg);
+    
+}
+
+.illustrations {
+    grid-area: illustrations;
+    background-color: var(--illustrations);
+    background-image: url(img/pattern-illustrations.svg);
+}
+
+.photography.photography {
+    grid-area: photo;
+    background-color: var(--photo);
+    background-image: url(img/pattern-photography.svg);
+    
+}
+
+.motion {
+    grid-area: motion;
+    background-color: var(--motion);
+    background-image: url(img/pattern-motion-graphics.svg);
+}
+
+.beige {
+    background-color: var(--illustrations);
+    display: inline-block;
+    margin-block: 2em 5em;
+}
+
+.black {
+    background-color: var(--btn);
+}
+
+.black:hover {
+    background-color: #755cde;
+}
+
+.beige:hover {
+    background-color: var(--ui);
+}
+
+.about img {
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+.about h2 {
+    margin-bottom: 1em;
+}
+
+.about p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.work {
+    text-align: center;
+
+    h2 {
+        margin-bottom: 2em;
+    }
+
+    img {
+        width: 75%;
+        border-radius: 15px;
+    }
+}
+
+
+
+.swiper-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.swiper-slide img {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+
+.book.book {
+    margin-block: 5rem 4rem;
+    padding: 3rem 1rem;
+    background-color: var(--btn);
+    color: var(--white);
+    border-radius: 15px;
+    h2 {
+        margin-bottom: 1em;
+    }
+    p {
+        color: var(--white);
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.5em;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .beige {
+        margin-bottom: 0;
+    }
+}
+
+footer {
+    display: flex;
+    padding-bottom: 2em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        padding: 2rem;
+        margin-bottom: 1rem;
+
+        .logo {
+            height: 60px;
+        }
+    }
+
+    .black {
+        font-size: 1rem;
+        padding: 1rem 3rem;
+    }
+
+    .beige {
+        font-size: 1rem;
+        padding: 1rem 3rem;
+    }
+
+
+    .container {
+        padding: 2rem;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+        margin-bottom: 1em;
+    }
+
+    .main-header p {
+        margin-bottom: 5em;
+    }
+
+    .skills {
+        grid-template-columns: repeat(auto-fit,minmax(175px,1fr));
+        grid-template-rows: repeat(3, 175px);
+        grid-template-areas: 
+            'graphic graphic ui apps'
+            'graphic graphic illustrations illustrations'
+            'photo photo motion motion';
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        justify-items: stretch;
+    }
+
+    .design.design {
+        height: auto;
+    }
+
+    .about {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        text-align: left;
+
+        img {
+            max-width: 50%;
+            position: relative;
+            right: 100px;
+        }
+    }
+
+    footer {
+        padding-bottom: 5rem;
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {
+    header {
+        padding: 2rem 8rem;
+        margin-bottom: 1rem;
+    }
+
+    .container {
+        padding: 6rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 1em;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .main-header p {
+        font-size: 1.2em;
+        max-width: 60%;
+        margin-bottom: 10rem;
+    }
+
+    .skills {
+        grid-template-rows: 240px 240px;
+        grid-template-columns: 2fr 1fr 1fr 2fr;
+        grid-template-areas:
+            'graphic ui apps photo'
+            'graphic illustrations illustrations motion';
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        margin-bottom: 10rem;
+        
+    }
+
+    .skills > div {
+        height: auto;
+    }
+
+    .about img {
+        position: static;
+        max-width: 40%;
+        margin-right: 4rem;
+    }
+
+    .swiper {
+        width: 95%;
+    }
+
+    .book {
+        display: flex;
+        text-align: left;
+        
+        align-items: center;
+        justify-content: center;
+
+       
+
+        .book-wrap {
+            h2 {
+                margin-top: 4rem;
+            }
+            max-width: 60%;
+            p {
+                margin: 0;
+                margin-bottom: 4rem;
+            }
+        }
+    }
+
+}
+
